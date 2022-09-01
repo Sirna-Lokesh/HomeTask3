@@ -1,0 +1,12 @@
+function getMiddle(s) {
+    var lengthOfString = s.length;
+    if (lengthOfString % 2 == 0) {
+        let index1 = Math.floor(lengthOfString / 2) - 1;
+        let index2 = Math.floor(lengthOfString / 2);
+        return s[index1] + s[index2];
+    }
+    else {
+        let index1 = Math.floor(lengthOfString / 2);
+        return s[index1];
+    }
+}
