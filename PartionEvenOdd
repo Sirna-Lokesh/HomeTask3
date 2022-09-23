@@ -1,0 +1,18 @@
+function even(number) {
+    return number % 2 == 0;
+}
+function odd(number) {
+    return number % 2 == 1;
+}
+function partitionOn(pred, items) {
+    let evenArray = items.filter(even);
+    let oddArray = items.filter(odd);
+    items.length = 0;
+    for (elementIndex = 0; elementIndex < oddArray.length; elementIndex++) {
+        items.push(oddArray[elementIndex]);
+    }
+    for (elementIndex = 0; elementIndex < evenArray.length; elementIndex++) {
+        items.push(evenArray[elementIndex]);
+    }
+    return oddArray.length;
+}
